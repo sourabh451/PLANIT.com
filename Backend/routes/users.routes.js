@@ -30,6 +30,12 @@ function isValidAccount_name(account_name) {
 userRouter.post("/register", async (req, res) => {
   let { email, password, full_name, account_name } = req.body;
 
+  // Validate full name
+  if (!isValidFull_name(full_name)) {
+    res.status(400).send({ msg: "Invalid full name." });
+    return;
+  }
+
   // Validate email
   if (!isValidEmail(email)) {
     res.status(400).send({ msg: "Invalid email address." });
@@ -39,12 +45,6 @@ userRouter.post("/register", async (req, res) => {
   // Validate password
   if (!isValidPassword(password)) {
     res.status(400).send({ msg: "Invalid password." });
-    return;
-  }
-
-  // Validate full name
-  if (!isValidFull_name(full_name)) {
-    res.status(400).send({ msg: "Invalid full name." });
     return;
   }
 
