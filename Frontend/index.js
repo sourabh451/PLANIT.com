@@ -9,10 +9,27 @@ selectBtn.addEventListener("click", () =>
 );
 
 let wk_mngt1 = document.getElementById("wk_mngt1");
+let wk_mngt2 = document.getElementById("wk_mngt2");
+let wk_mngt3 = document.getElementById("wk_mngt3");
+let wk_mngt4 = document.getElementById("wk_mngt4");
+let wk_mngt5 = document.getElementById("wk_mngt5");
 
 wk_mngt1.addEventListener("click", () => {
   window.location.href = "./pages/wk_mngt.html";
 });
+wk_mngt2.addEventListener("click", () => {
+  window.location.href = "./pages/wk_mngt.html";
+});
+wk_mngt3.addEventListener("click", () => {
+  window.location.href = "./pages/wk_mngt.html";
+});
+wk_mngt4.addEventListener("click", () => {
+  window.location.href = "./pages/wk_mngt.html";
+});
+wk_mngt5.addEventListener("click", () => {
+  window.location.href = "./pages/wk_mngt.html";
+});
+
 // drop down-----end
 
 let hreflink = document.getElementById("hrefLogin");
@@ -29,3 +46,15 @@ if (useremail) {
 }
 
 // username show in navbar over
+
+let logout = document.getElementById("logout");
+
+logout.addEventListener("click", () => {
+  localStorage.removeItem("token");
+  localStorage.removeItem("email");
+  alert("Logout Successful");
+  window.location.href = "index.html";
+});
+
+// backend deployed url
+//

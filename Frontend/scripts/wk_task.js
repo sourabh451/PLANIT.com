@@ -486,3 +486,12 @@ let hmpgredirect = document.getElementById("hmpgredirect");
 hmpgredirect.addEventListener("click", () => {
   window.location.href = "../index.html";
 });
+
+let logout = document.getElementById("logout");
+
+logout.addEventListener("click", () => {
+  localStorage.removeItem("token");
+  localStorage.removeItem("email");
+  alert("Logout Successful");
+  window.location.href = "../index.html";
+});
