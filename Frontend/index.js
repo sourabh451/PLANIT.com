@@ -57,4 +57,4 @@ logout.addEventListener("click", () => {
 });
 
 // backend deployed url
-//
+// https://glorious-bull-girdle.cyclic.app

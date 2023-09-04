@@ -25,7 +25,7 @@ Pie.addEventListener("click", () => {
 // start-----------------------------------
 
 function createChart() {
-  fetch("http://localhost:8420/tasks", {
+  fetch("https://glorious-bull-girdle.cyclic.app/tasks", {
     headers: {
       Authorization: localStorage.getItem("token"),
     },
